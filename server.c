@@ -24,7 +24,7 @@ on_name_acquired(GDBusConnection *connection, const gchar *name, gpointer user_d
 	interface = min_min_bus_gdbus_skeleton_new();
 	g_signal_connect (interface, "handle-hello-world", G_CALLBACK (on_handle_hello_world), NULL);
 	error = NULL;
-	!g_dbus_interface_skeleton_export (G_DBUS_INTERFACE_SKELETON (interface), connection, "/com/fatminmin/GDBUS", &error));
+	!g_dbus_interface_skeleton_export (G_DBUS_INTERFACE_SKELETON (interface), connection, "/com/fatminmin/GDBUS", &error);
 }
 
 int main()
